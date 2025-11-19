@@ -1,0 +1,109 @@
+/* --- Basic reset --- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: Georgia, "Times New Roman", serif; line-height: 1.65; color: #111; background: #fff; }
+img { max-width: 100%; display: block; }
+a { color: #0a5cc0; text-decoration: underline; }
+a:hover { text-decoration: none; }
+
+/* --- Article container --- */
+.container {
+  max-width: 720px;             /* classic article measure */
+  padding: 22px 18px;
+  margin: 0 auto;
+}
+
+/* --- Lead art (now above title) --- */
+.lead-art {
+  margin: 0 0 1rem;             /* sits snugly above the title */
+  border: 1px solid #eee;
+}
+.lead-art img { width: 100%; height: auto; }
+.lead-art figcaption {
+  font-size: .9rem;
+  color: #666;
+  padding: .5rem .6rem;
+  border-top: 1px solid #eee;
+}
+
+/* --- Article header --- */
+.article-header { margin: 0 0 1.1rem; }
+.hed {
+  font-family: Georgia, "Times New Roman", serif;
+  /* Smaller overall, tighter upper bound */
+  font-size: clamp(1.35rem, 1.6vw + 0.9rem, 1.8rem);
+  line-height: 1.16;
+  margin: 0 0 .4rem 0;
+  font-weight: 700;
+  max-width: 38ch;        /* modestly wider measure than before */
+  text-wrap: balance;
+  widows: 2; orphans: 2;
+}
+
+.byline {
+  margin: 0 0 .75rem 0;
+  color: #444;
+  font-size: 0.98rem;
+}
+.dek {
+  margin: 0 0 .7rem 0;
+  color: #222;
+  font-size: 1.02rem;
+}
+
+/* --- Body --- */
+.story { font-size: 1.03rem; }
+.section-block + .section-block { margin-top: 1rem; }
+.subhed {
+  font-size: 1.22rem;
+  line-height: 1.25;
+  margin: .2rem 0 .35rem;
+  font-weight: 700;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: .25rem;
+}
+.pull {
+  margin: .9rem 0 1rem;
+  padding: .85rem 1rem;
+  border-left: 4px solid #0a5cc0;
+  background: #f6f8ff;
+  font-weight: 600;
+}
+.stat {
+  display: inline-block;
+  background: #f2f7ff;
+  border: 1px solid #e6eefc;
+  border-radius: 4px;
+  padding: 0 .3rem;
+}
+
+/* --- Chart block --- */
+.chart-block {
+  margin: 1.1rem 0;
+}
+
+/* --- Tweet embed (unused here but kept for consistency) --- */
+.tweet-block { margin: 1.25rem 0; }
+.tweet-block .twitter-tweet { margin: 0 auto !important; }
+
+/* --- Watch-for list --- */
+.watch-for ul { padding-left: 1.1rem; }
+.watch-for li { margin: .4rem 0; }
+.kicker-note { color: #444; margin-top: .6rem; }
+
+/* --- Footer --- */
+.footer { margin: 2rem 0 1rem; color: #666; font-size: .95rem; }
+.footer .copyright { margin: 0; }
+
+/* --- Dark mode polish --- */
+@media (prefers-color-scheme: dark) {
+  body { background: #0b1220; color: #e6e9ee; }
+  a { color: #7bb1ff; }
+  .byline { color: #a7b1bf; }
+  .lead-art { border-color: #1e2740; }
+  .lead-art figcaption { color: #a7b1bf; border-color: #1e2740; }
+  .subhed { border-color: #1e2740; }
+  .pull { background: #0e1a35; border-left-color: #7bb1ff; }
+  .stat { background: #0f1f3d; border-color: #13284c; }
+  .footer { color: #a7b1bf; }
+}
